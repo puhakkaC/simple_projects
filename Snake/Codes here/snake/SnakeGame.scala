@@ -13,7 +13,7 @@ object SnakeGame {
 
   // Randomly returns the position of a single square on the grid, excluding the
   // very edges (where no food can appear and which kill the snake if it enters).
-  //TÄMÄ ANNETTUNA EI OMA TEKEMÄ
+  //THIS PART WAS GIVEN!! NOT MY WORK
   def randomLocationOnGrid() = {
     new GridPos(Random.nextInt(SizeInSquares - 2) + 1,
                 Random.nextInt(SizeInSquares - 2) + 1)
@@ -43,7 +43,7 @@ class SnakeGame(initialPos: GridPos, initialHeading: CompassDir) {
   // This gets repeatedly called as the game progresses. It advances the snake by
   // one square in its current heading. In case the snake finds food, it grows by
   // one segment, the current nextFood vanishes and new food is placed in a random location.
-  //TÄMÄ ANNETTUNA EI OMA TEKEMÄ
+  //THIS PART WAS GIVEN!! NOT MY WORK
   def advance() = {
     if (this.segments.head.neighbor(this.snakeHeading) == this.nextFood) {
       this.nextFood = randomLocationOnGrid()
