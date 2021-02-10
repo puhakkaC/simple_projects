@@ -19,12 +19,12 @@ object SnakeApp extends App {
   def toPixelPos(gridPos: GridPos) = Pos(gridPos.x * PixelsPerGridSquare, gridPos.y * PixelsPerGridSquare)
 
   // Set up the game:
-  //TÄMÄ ANNETTUNA EI OMA TEKEMÄ
+  //THIS PART WAS GIVEN!! NOT MY WORK
   val initialGridPosOfSnake = new GridPos(SizeInSquares / 5, SizeInSquares / 2)
   val game = new SnakeGame(initialGridPosOfSnake, East)
 
   // Load the game in a view:
-  //TÄMÄ ANNETTUNA EI OMA TEKEMÄ
+  //THIS PART WAS GIVEN!! NOT MY WORK
   val gui = new View(game, GameSpeed, "Snake") {
 
     // An image of the game world. From back to front: a solid white background, a snake, and a piece of food.
@@ -41,7 +41,7 @@ object SnakeApp extends App {
     override def isDone = game.isOver
 
     // Turns the snake whenever an arrow key or one of the WASD keys is pressed.
-    //TÄMÄ ANNETTUNA EI OMA TEKEMÄ
+   //THIS PART WAS GIVEN!! NOT MY WORK
     override def onKeyDown(key: Key) = {
       CompassDir.fromKey(key) match {
         case Some(newDirection) =>
